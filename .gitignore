@@ -379,3 +379,9 @@ FodyWeavers.xsd
 /src/CSIRReact.Logic/obj
 /src/CSIRReact.DataAccess/obj
 /.vs
+/src/CSIRReact.Server.Test/bin/Debug/net8.0/CoverletSourceRootsMapping_CSIRReact.Server.Test
+/src/CSIRReact.Server.Test/obj/Debug/net8.0/CSIRReact.Server.Test.AssemblyInfo.cs
+/src/CSIRReact.Server.Test/obj/Debug/net8.0/CSIRReact.Server.Test.AssemblyInfoInputs.cache
+/src/CSIRReact.Server.Test/obj/Debug/net8.0/CSIRReact.Server.Test.csproj.AssemblyReference.cache
+/src/CSIRReact.Server.Test/obj/Debug/net8.0/CSIRReact.Server.Test.GeneratedMSBuildEditorConfig.editorconfig
+/src/CSIRReact.Server.Test/obj/Debug/net8.0/CSIRReact.Server.Test.GlobalUsings.g.cs
