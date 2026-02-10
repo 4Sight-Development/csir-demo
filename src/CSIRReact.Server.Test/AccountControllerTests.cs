@@ -1,9 +1,8 @@
 using NUnit.Framework;
 using Moq;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Http;
 using CSIRReact.Server.Controllers;
+using CSIRReact.Logic.Interfaces;
 using System.Threading.Tasks;
 
 namespace CSIRReact.Server.Test
@@ -14,15 +13,10 @@ namespace CSIRReact.Server.Test
         public async Task Login_ReturnsOk_ForValidDemoCredentials()
         {
             // Arrange
-            var controller = new AccountController();
-            var context = new DefaultHttpContext();
-            var configMock = new Mock<IConfiguration>();
-            configMock.Setup(c => c.GetSection("Jwt")["AccessTokenMinutes"]).Returns("30");
-            configMock.Setup(c => c.GetSection("Jwt")["Issuer"]).Returns("issuer");
-            configMock.Setup(c => c.GetSection("Jwt")["Audience"]).Returns("audience");
-            configMock.Setup(c => c.GetSection("Jwt")["Key"]).Returns("testkeytestkeytestkeytestkey12345678");
-            context.RequestServices = new ServiceProviderStub(configMock.Object);
-            controller.ControllerContext = new ControllerContext { HttpContext = context };
+            var authMock = new Mock<IAuthService>();
+            authMock.Setup(a => a.LoginAsync("demo.csir@demomail.com", "D3mo@Pass123!", default))
+                .ReturnsAsync(new LoginResult { AccessToken = "token", ExpiresInSeconds = 180 * 30, RefreshToken = "refresh" });
+            var controller = new AccountController(authMock.Object);
 
             var model = new AccountController.LoginModel
             {
@@ -41,11 +35,10 @@ namespace CSIRReact.Server.Test
         public async Task Login_ReturnsUnauthorized_ForInvalidCredentials()
         {
             // Arrange
-            var controller = new AccountController();
-            var context = new DefaultHttpContext();
-            var configMock = new Mock<IConfiguration>();
-            context.RequestServices = new ServiceProviderStub(configMock.Object);
-            controller.ControllerContext = new ControllerContext { HttpContext = context };
+            var authMock = new Mock<IAuthService>();
+            authMock.Setup(a => a.LoginAsync(It.IsAny<string>(), It.IsAny<string>(), default))
+                .ReturnsAsync((LoginResult?)null);
+            var controller = new AccountController(authMock.Object);
 
             var model = new AccountController.LoginModel
             {
@@ -64,7 +57,8 @@ namespace CSIRReact.Server.Test
         public async Task Login_ReturnsBadRequest_ForInvalidModel()
         {
             // Arrange
-            var controller = new AccountController();
+            var authMock = new Mock<IAuthService>();
+            var controller = new AccountController(authMock.Object);
             controller.ModelState.AddModelError("Email", "Required");
             var model = new AccountController.LoginModel();
 
@@ -76,15 +70,5 @@ namespace CSIRReact.Server.Test
         }
     }
 
-    // Helper for IServiceProvider
-    public class ServiceProviderStub : IServiceProvider
-    {
-        private readonly IConfiguration _config;
-        public ServiceProviderStub(IConfiguration config) => _config = config;
-        public object? GetService(Type serviceType)
-        {
-            if (serviceType == typeof(IConfiguration)) return _config;
-            return null;
-        }
-    }
+    // ServiceProviderStub no longer needed after refactor
 }
