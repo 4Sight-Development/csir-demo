@@ -8,6 +8,12 @@ The Provision or supply of Software Development Services
 docker build -f src\csirreact.client\Dockerfile --force-rm -t 4sightdev/csir-eoi-demo-client:latest src\.
 docker build -f src\CSIRReact.Server\Dockerfile --force-rm -t 4sightdev/csir-eoi-demo-server:latest src\.
 
+
+docker pull 4sightdev/csir-eoi-demo-server
+docker pull 4sightdev/csir-eoi-demo-client
+
+docker run -d -p 3001:3000 -e NEXT_PUBLIC_API_BASE_URL=http://localhost:8080 4sightdev/csir-eoi-demo-client:latest
+docker run -d -p 8081:8081 -p 8080:8080 -e CorsOrigins:[0]=http://localhost:3001 4sightdev/csir-eoi-demo-server:latest
 # Source Code
 
 StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
