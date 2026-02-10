@@ -23,6 +23,8 @@
     <ProjectReference Include="..\csirreact.client\csirreact.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\CSIRReact.Logic\CSIRReact.Logic.csproj" />
+    <ProjectReference Include="..\CSIRReact.DataAccess\CSIRReact.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

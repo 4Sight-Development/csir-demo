@@ -9,4 +9,7 @@
 /src/CSIRReact.Server.Test/bin
 /src/CSIRReact.Server.Test/obj
 /.vs/csir-demo.slnx/v18
-/src/CSIRReact.Logic/bin/Debug/net8.0
+/src/CSIRReact.Logic/bin
+/src/CSIRReact.DataAccess/bin
+/src/CSIRReact.Logic/obj
+/src/CSIRReact.DataAccess/obj

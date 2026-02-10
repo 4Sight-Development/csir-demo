@@ -4,6 +4,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
 using CSIRReact.Server.Controllers;
 using System.Threading.Tasks;
+using CSIRReact.Logic.Interfaces;
+using CSIRReact.Logic.Models;
 
 namespace CSIRReact.Server.Test
 {
@@ -14,7 +16,10 @@ namespace CSIRReact.Server.Test
         {
             // Arrange
             var loggerMock = new Mock<ILogger<WeatherForecastController>>();
-            var controller = new WeatherForecastController(loggerMock.Object);
+            var weatherMock = new Mock<IWeatherService>();
+            weatherMock.Setup(w => w.GetGridAsync(null, null, null, true, null, null, default))
+                .ReturnsAsync(new WeatherGridResponse { LocationHeader = "Default Location" });
+            var controller = new WeatherForecastController(loggerMock.Object, weatherMock.Object);
 
             // Act
             var result = await controller.GetGrid(null, null, null, true, null, null);
@@ -22,7 +27,7 @@ namespace CSIRReact.Server.Test
             // Assert
             var okResult = result.Result as OkObjectResult;
             Assert.IsNotNull(okResult);
-            Assert.IsInstanceOf<WeatherForecastController.WeatherGridResponse>(okResult.Value);
+            Assert.IsInstanceOf<WeatherGridResponse>(okResult.Value);
         }
 
         [Test]
@@ -30,7 +35,10 @@ namespace CSIRReact.Server.Test
         {
             // Arrange
             var loggerMock = new Mock<ILogger<WeatherForecastController>>();
-            var controller = new WeatherForecastController(loggerMock.Object);
+            var weatherMock = new Mock<IWeatherService>();
+            weatherMock.Setup(w => w.GetGridMultiAsync(null, null, default))
+                .ReturnsAsync(new WeatherMultiGridResponse());
+            var controller = new WeatherForecastController(loggerMock.Object, weatherMock.Object);
 
             // Act
             var result = await controller.GetGridMulti(null, null);
@@ -38,7 +46,7 @@ namespace CSIRReact.Server.Test
             // Assert
             var okResult = result.Result as OkObjectResult;
             Assert.IsNotNull(okResult);
-            Assert.IsInstanceOf<WeatherForecastController.WeatherMultiGridResponse>(okResult.Value);
+            Assert.IsInstanceOf<WeatherMultiGridResponse>(okResult.Value);
         }
     }
 }

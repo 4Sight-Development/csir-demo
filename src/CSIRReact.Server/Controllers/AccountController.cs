@@ -1,13 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
-using System.Reflection;
-
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+using CSIRReact.Logic.Interfaces;
 
 namespace CSIRReact.Server.Controllers
 {
@@ -15,6 +9,13 @@ namespace CSIRReact.Server.Controllers
     [Route("[controller]")]
     public class AccountController : ControllerBase
     {
+        private readonly IAuthService _authService;
+
+        public AccountController(IAuthService authService)
+        {
+            _authService = authService;
+        }
+
         public class LoginModel
         {
             [Required]
@@ -30,59 +31,17 @@ namespace CSIRReact.Server.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
-            Guid? personId = null;
             try
             {
                 if (!ModelState.IsValid)
                 {
                     return BadRequest(ModelState);
                 }
-
-                var configMinutes = HttpContext.RequestServices.GetService<IConfiguration>()?
-                    .GetSection("Jwt")?["AccessTokenMinutes"];
-
-                var expiresInMinutes = int.TryParse(configMinutes, out var mins) ? mins : 30;
-
-                // Fixed demo credentials
-                var email = model.Email.Trim().ToLower();
-                var password = model.Password.Trim();
-                if (email == "demo.csir@demomail.com" && password == "D3mo@Pass123!")
-                {
-                    personId = Guid.NewGuid();
-
-                    var config = HttpContext.RequestServices.GetService<IConfiguration>()!;
-                    var issuer = config.GetSection("Jwt")["Issuer"];
-                    var audience = config.GetSection("Jwt")["Audience"];
-                    var key = config.GetSection("Jwt")["Key"] ?? string.Empty;
-                    var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
-                    var creds = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
-
-                    var claims = new List<Claim>
-                    {
-                        new Claim(JwtRegisteredClaimNames.Sub, email),
-                        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                        new Claim(ClaimTypes.Name, email),
-                        new Claim("pid", personId?.ToString() ?? string.Empty)
-                    };
-
-                    var now = DateTime.UtcNow;
-                    var token = new JwtSecurityToken(
-                        issuer: issuer,
-                        audience: audience,
-                        claims: claims,
-                        notBefore: now,
-                        expires: now.AddMinutes(expiresInMinutes),
-                        signingCredentials: creds);
-
-                    var accessToken = new JwtSecurityTokenHandler().WriteToken(token);
-                    var refreshToken = $"{Guid.NewGuid()}{Guid.NewGuid()}{Guid.NewGuid()}{Guid.NewGuid()}{Guid.NewGuid()}{Guid.NewGuid()}";
-
-                    return Ok(new { accessToken, expiresIn = expiresInMinutes * 180, refreshToken });
-                }
-                else
-                {
+                var result = await _authService.LoginAsync(model.Email, model.Password);
+                if (result == null)
                     return Unauthorized(new { Message = "Invalid login attempt." });
-                }
+
+                return Ok(new { accessToken = result.AccessToken, expiresIn = result.ExpiresInSeconds, refreshToken = result.RefreshToken });
             }
             catch (Exception ex)
             {
