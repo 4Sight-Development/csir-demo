@@ -20,9 +20,6 @@
 
   <ItemGroup>
     <PackageReference Include="MQTTnet" Version="4.3.2" />
-    <ProjectReference Include="..\csirreact.client\csirreact.client.esproj">
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
   </ItemGroup>
 
 </Project>

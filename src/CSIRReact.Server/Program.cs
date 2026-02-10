@@ -8,24 +8,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHostedService<CSIRReact.Server.Services.MqttPublisherService>();
 
+var allowedCors = builder.Configuration.GetSection("CorsOrigins").Get<string[]>();
+
 // CORS for local Next.js dev (http/https on port 3000)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowDev", policy =>
-        policy.WithOrigins(
-                // Next.js dev
-                "http://localhost:3000",
-                "https://localhost:3000",
-                // Vite dev default
-                "http://localhost:5173",
-                "https://localhost:5173",
-                // Alternate local hosts sometimes used
-                "http://127.0.0.1:5173",
-                "https://127.0.0.1:5173",
-                // Existing local ports
-                "https://localhost:41130",
-                "http://localhost:41130"
-            )
+        policy.WithOrigins(allowedCors)
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials());

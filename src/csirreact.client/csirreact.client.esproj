@@ -8,4 +8,10 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\.dockerignore">
+      <DependentUpon>$(DockerDefaultDockerfile)</DependentUpon>
+      <Link>.dockerignore</Link>
+    </None>
+  </ItemGroup>
 </Project>
