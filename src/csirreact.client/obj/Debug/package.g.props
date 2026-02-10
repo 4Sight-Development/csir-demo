@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <PackageJsonName Condition="$(PackageJsonName) == ''">free-nextjs-admin-dashboard</PackageJsonName>
+    <PackageJsonVersion Condition="$(PackageJsonVersion) == ''">2.2.2</PackageJsonVersion>
+    <PackageJsonPrivate Condition="$(PackageJsonPrivate) == ''">true</PackageJsonPrivate>
+    <PackageJsonScriptsDev Condition="$(PackageJsonScriptsDev) == ''">next dev --webpack</PackageJsonScriptsDev>
+    <PackageJsonScriptsDevWebpack Condition="$(PackageJsonScriptsDevWebpack) == ''">next dev --webpack</PackageJsonScriptsDevWebpack>
+    <PackageJsonScriptsBuild Condition="$(PackageJsonScriptsBuild) == ''">next build</PackageJsonScriptsBuild>
+    <PackageJsonScriptsStart Condition="$(PackageJsonScriptsStart) == ''">next start</PackageJsonScriptsStart>
+    <PackageJsonScriptsLint Condition="$(PackageJsonScriptsLint) == ''">eslint .</PackageJsonScriptsLint>
+    <PackageJsonDependenciesDanielSzulcReactWeatherWidget Condition="$(PackageJsonDependenciesDanielSzulcReactWeatherWidget) == ''">^1.1.1</PackageJsonDependenciesDanielSzulcReactWeatherWidget>
+    <PackageJsonDependenciesFullcalendarCore Condition="$(PackageJsonDependenciesFullcalendarCore) == ''">^6.1.19</PackageJsonDependenciesFullcalendarCore>
+    <PackageJsonDependenciesFullcalendarDaygrid Condition="$(PackageJsonDependenciesFullcalendarDaygrid) == ''">^6.1.19</PackageJsonDependenciesFullcalendarDaygrid>
+    <PackageJsonDependenciesFullcalendarInteraction Condition="$(PackageJsonDependenciesFullcalendarInteraction) == ''">^6.1.19</PackageJsonDependenciesFullcalendarInteraction>
+    <PackageJsonDependenciesFullcalendarList Condition="$(PackageJsonDependenciesFullcalendarList) == ''">^6.1.19</PackageJsonDependenciesFullcalendarList>
+    <PackageJsonDependenciesFullcalendarReact Condition="$(PackageJsonDependenciesFullcalendarReact) == ''">^6.1.19</PackageJsonDependenciesFullcalendarReact>
+    <PackageJsonDependenciesFullcalendarTimegrid Condition="$(PackageJsonDependenciesFullcalendarTimegrid) == ''">^6.1.19</PackageJsonDependenciesFullcalendarTimegrid>
+    <PackageJsonDependenciesReactJvectormapCore Condition="$(PackageJsonDependenciesReactJvectormapCore) == ''">^1.0.4</PackageJsonDependenciesReactJvectormapCore>
+    <PackageJsonDependenciesReactJvectormapWorld Condition="$(PackageJsonDependenciesReactJvectormapWorld) == ''">^1.1.2</PackageJsonDependenciesReactJvectormapWorld>
+    <PackageJsonDependenciesTailwindcssForms Condition="$(PackageJsonDependenciesTailwindcssForms) == ''">^0.5.10</PackageJsonDependenciesTailwindcssForms>
+    <PackageJsonDependenciesTailwindcssPostcss Condition="$(PackageJsonDependenciesTailwindcssPostcss) == ''">^4.1.17</PackageJsonDependenciesTailwindcssPostcss>
+    <PackageJsonDependenciesApexcharts Condition="$(PackageJsonDependenciesApexcharts) == ''">^4.7.0</PackageJsonDependenciesApexcharts>
+    <PackageJsonDependenciesAutoprefixer Condition="$(PackageJsonDependenciesAutoprefixer) == ''">^10.4.22</PackageJsonDependenciesAutoprefixer>
+    <PackageJsonDependenciesCoreJs Condition="$(PackageJsonDependenciesCoreJs) == ''">^3.48.0</PackageJsonDependenciesCoreJs>
+    <PackageJsonDependenciesFlatpickr Condition="$(PackageJsonDependenciesFlatpickr) == ''">^4.6.13</PackageJsonDependenciesFlatpickr>
+    <PackageJsonDependenciesMqtt Condition="$(PackageJsonDependenciesMqtt) == ''">^5.15.0</PackageJsonDependenciesMqtt>
+    <PackageJsonDependenciesNext Condition="$(PackageJsonDependenciesNext) == ''">16.0.10</PackageJsonDependenciesNext>
+    <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^19.2.0</PackageJsonDependenciesReact>
+    <PackageJsonDependenciesReactApexcharts Condition="$(PackageJsonDependenciesReactApexcharts) == ''">^1.8.0</PackageJsonDependenciesReactApexcharts>
+    <PackageJsonDependenciesReactDnd Condition="$(PackageJsonDependenciesReactDnd) == ''">^16.0.1</PackageJsonDependenciesReactDnd>
+    <PackageJsonDependenciesReactDndHtml5Backend Condition="$(PackageJsonDependenciesReactDndHtml5Backend) == ''">^16.0.1</PackageJsonDependenciesReactDndHtml5Backend>
+    <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^19.2.0</PackageJsonDependenciesReactDom>
+    <PackageJsonDependenciesReactDropzone Condition="$(PackageJsonDependenciesReactDropzone) == ''">^14.3.8</PackageJsonDependenciesReactDropzone>
+    <PackageJsonDependenciesRecharts Condition="$(PackageJsonDependenciesRecharts) == ''">^3.7.0</PackageJsonDependenciesRecharts>
+    <PackageJsonDependenciesSwiper Condition="$(PackageJsonDependenciesSwiper) == ''">^11.2.10</PackageJsonDependenciesSwiper>
+    <PackageJsonDependenciesTailwindMerge Condition="$(PackageJsonDependenciesTailwindMerge) == ''">^2.6.0</PackageJsonDependenciesTailwindMerge>
+    <PackageJsonDevdependenciesEslintEslintrc Condition="$(PackageJsonDevdependenciesEslintEslintrc) == ''">^3.3.1</PackageJsonDevdependenciesEslintEslintrc>
+    <PackageJsonDevdependenciesSvgrWebpack Condition="$(PackageJsonDevdependenciesSvgrWebpack) == ''">^8.1.0</PackageJsonDevdependenciesSvgrWebpack>
+    <PackageJsonDevdependenciesTypesNode Condition="$(PackageJsonDevdependenciesTypesNode) == ''">^20.19.25</PackageJsonDevdependenciesTypesNode>
+    <PackageJsonDevdependenciesTypesReact Condition="$(PackageJsonDevdependenciesTypesReact) == ''">^19.2.1</PackageJsonDevdependenciesTypesReact>
+    <PackageJsonDevdependenciesTypesReactDom Condition="$(PackageJsonDevdependenciesTypesReactDom) == ''">^19.2.1</PackageJsonDevdependenciesTypesReactDom>
+    <PackageJsonDevdependenciesTypesReactTransitionGroup Condition="$(PackageJsonDevdependenciesTypesReactTransitionGroup) == ''">^4.4.12</PackageJsonDevdependenciesTypesReactTransitionGroup>
+    <PackageJsonDevdependenciesEslint Condition="$(PackageJsonDevdependenciesEslint) == ''">^9.39.1</PackageJsonDevdependenciesEslint>
+    <PackageJsonDevdependenciesEslintConfigNext Condition="$(PackageJsonDevdependenciesEslintConfigNext) == ''">16.0.7</PackageJsonDevdependenciesEslintConfigNext>
+    <PackageJsonDevdependenciesPostcss Condition="$(PackageJsonDevdependenciesPostcss) == ''">^8.5.6</PackageJsonDevdependenciesPostcss>
+    <PackageJsonDevdependenciesTailwindcss Condition="$(PackageJsonDevdependenciesTailwindcss) == ''">^4.1.17</PackageJsonDevdependenciesTailwindcss>
+    <PackageJsonDevdependenciesTypescript Condition="$(PackageJsonDevdependenciesTypescript) == ''">^5.9.3</PackageJsonDevdependenciesTypescript>
+    <PackageJsonOverridesReactJvectormapCoreReact Condition="$(PackageJsonOverridesReactJvectormapCoreReact) == ''">^16.8.0 || ^17 || ^18 || ^19</PackageJsonOverridesReactJvectormapCoreReact>
+    <PackageJsonOverridesReactJvectormapCoreReactDom Condition="$(PackageJsonOverridesReactJvectormapCoreReactDom) == ''">^16.8.0 || ^17 || ^18 || ^19</PackageJsonOverridesReactJvectormapCoreReactDom>
+    <PackageJsonOverridesReactJvectormapWorldReact Condition="$(PackageJsonOverridesReactJvectormapWorldReact) == ''">^16.8.0 || ^17 || ^18 || ^19</PackageJsonOverridesReactJvectormapWorldReact>
+    <PackageJsonOverridesReactJvectormapWorldReactDom Condition="$(PackageJsonOverridesReactJvectormapWorldReactDom) == ''">^16.8.0 || ^17 || ^18 || ^19</PackageJsonOverridesReactJvectormapWorldReactDom>
+  </PropertyGroup>
+</Project>

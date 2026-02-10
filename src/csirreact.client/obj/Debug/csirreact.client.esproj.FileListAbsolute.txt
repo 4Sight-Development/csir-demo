@@ -1,0 +1,1 @@
+C:\dev\csir-demo\src\csirreact.client\obj\Debug\csirreact.client.esproj.CoreCompileInputs.cache

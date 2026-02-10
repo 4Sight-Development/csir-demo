@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11304.174 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "csirreact.client", "csirreact.client\csirreact.client.esproj", "{C808AEDF-A41E-855C-928D-EADA97E1DCA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSIRReact.Server", "CSIRReact.Server\CSIRReact.Server.csproj", "{3456625C-CEC6-4136-8D36-9081C25A0894}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSIRReact.Server.Test", "CSIRReact.Server.Test\CSIRReact.Server.Test.csproj", "{DB8D9FD2-A459-43F3-954A-72D865A699FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{3456625C-CEC6-4136-8D36-9081C25A0894}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3456625C-CEC6-4136-8D36-9081C25A0894}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3456625C-CEC6-4136-8D36-9081C25A0894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB8D9FD2-A459-43F3-954A-72D865A699FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB8D9FD2-A459-43F3-954A-72D865A699FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB8D9FD2-A459-43F3-954A-72D865A699FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB8D9FD2-A459-43F3-954A-72D865A699FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,6 @@
 
 /src/.vs
 /src/csirreact.client/.vscode
-/src/csirreact.client/obj/Debug
-/src/CSIRReact.Server/bin/Debug/net8.0
-/src/CSIRReact.Server/obj/Debug/net8.0
+/src/CSIRReact.Server/bin
+/src/CSIRReact.Server/obj
 /.vs/csir-demo.slnx/v18

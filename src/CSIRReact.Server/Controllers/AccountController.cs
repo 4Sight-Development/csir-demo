@@ -38,8 +38,10 @@ namespace CSIRReact.Server.Controllers
                     return BadRequest(ModelState);
                 }
 
-                var expiresInMinutes = int.TryParse(HttpContext.RequestServices.GetService<IConfiguration>()?
-                    .GetSection("Jwt")["AccessTokenMinutes"], out var mins) ? mins : 30;
+                var configMinutes = HttpContext.RequestServices.GetService<IConfiguration>()?
+                    .GetSection("Jwt")?["AccessTokenMinutes"];
+
+                var expiresInMinutes = int.TryParse(configMinutes, out var mins) ? mins : 30;
 
                 // Fixed demo credentials
                 var email = model.Email.Trim().ToLower();
@@ -73,7 +75,7 @@ namespace CSIRReact.Server.Controllers
                         signingCredentials: creds);
 
                     var accessToken = new JwtSecurityTokenHandler().WriteToken(token);
-                    var refreshToken = Guid.NewGuid().ToString("N");
+                    var refreshToken = $"{Guid.NewGuid()}{Guid.NewGuid()}{Guid.NewGuid()}{Guid.NewGuid()}{Guid.NewGuid()}{Guid.NewGuid()}";
 
                     return Ok(new { accessToken, expiresIn = expiresInMinutes * 180, refreshToken });
                 }
