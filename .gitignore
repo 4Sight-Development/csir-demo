@@ -7,3 +7,11 @@
 /src/csirreact.client/obj/Debug
 /src/CSIRReact.Server/bin/Debug/net8.0
 /src/CSIRReact.Server/obj/Debug/net8.0
+/.vs/csir-demo/v17/.wsuo
+/.vs/csir-demo/v17/DocumentLayout.json
+/.vs/VSWorkspaceState.json
+/src/CSIRReact.Server/obj/CSIRReact.Server.csproj.nuget.dgspec.json
+/src/CSIRReact.Server/obj/CSIRReact.Server.csproj.nuget.g.props
+/src/CSIRReact.Server/obj/CSIRReact.Server.csproj.nuget.g.targets
+/src/CSIRReact.Server/obj/project.assets.json
+/src/CSIRReact.Server/obj/project.nuget.cache
