@@ -134,7 +134,8 @@ export default function WeatherPredictionChart() {
 
   return (
     <div className="rounded border border-gray-200 p-4 dark:border-white/[0.06]">
-      <ApexChart options={options} series={series} type="line" height={360} />
+      {/*<h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-2">Weather Weekly Prediction</h2>*/}
+      <ApexChart options={options} series={series} type="line" height={280} />
     </div>
   );
 }

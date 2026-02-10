@@ -128,16 +128,16 @@ export default function MqttLiveWidget({
 
   return (
     <div
-      className={`rounded-sm border border-stroke p-4 shadow-default dark:border-strokedark ${
+      className={`rounded-sm  shadow-default dark:border-strokedark ${
         isDark ? "bg-boxdark" : "bg-white"
       }`}
     >
       {(showTitle || showStatusBadge) && (
         <div className="mb-2 flex items-center justify-between">
           {showTitle && (
-            <h3 className="text-title-md font-semibold text-black dark:text-white">
+            <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-2">
               {title}
-            </h3>
+            </h2>
           )}
           {showStatusBadge && (
             <span className={`text-sm ${connected ? "text-green-600" : "text-red-600"}`}>
@@ -151,7 +151,7 @@ export default function MqttLiveWidget({
           Bits Received: {message ?? "—"}
         </p>
       )}
-      <div style={{ width: "100%", height: 300 }}>
+      <div style={{ width: "100%", height: 280 }}>
         <ResponsiveContainer style={{ background: "transparent" }}>
           <LineChart data={data} style={{ background: "transparent" }}>
             <CartesianGrid

@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { EcommerceMetrics } from "@/components/ecommerce/EcommerceMetrics";
 import React from "react";
@@ -34,16 +35,18 @@ export default function Ecommerce() {
       <div className="col-span-12">
         <StatisticsChart />
       </div> */}
-      <div className="col-span-12">
-        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-2">
-          Weather Weekly Prediction
-        </h2>
-        <WeatherPredictionChart />
-      </div>
+      {/*<div className="min-h-screen w-full flex flex-col overflow-y-auto overflow-x-hidden">*/}
+        <div className="col-span-12">
+          <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-2">
+            Weather Weekly Prediction
+          </h2>
+          <WeatherPredictionChart />
+        </div>
 
         <div className="col-span-12">
           <MqttLiveWidget topic="csirreact/feed/live" demo={false} />
         </div>
+      {/*</div>*/}
 
       {/* <div className="col-span-12">
         <SimpleWeatherWidget autoLocate="gps" />

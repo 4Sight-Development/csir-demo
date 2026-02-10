@@ -3,12 +3,13 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "csirreact.client\\csirreact.client.esproj",
-        "Action": "Start"
+        "Path": "CSIRReact.Server\\CSIRReact.Server.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
       },
       {
-        "Path": "CSIRReact.Server\\CSIRReact.Server.csproj",
-        "Action": "Start"
+        "Path": "csirreact.client\\csirreact.client.esproj",
+        "Action": "StartWithoutDebugging"
       }
     ]
   }
