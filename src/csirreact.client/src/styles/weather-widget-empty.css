@@ -1,0 +1,2 @@
+/* Intentionally empty: CSS import from the widget package is stubbed via webpack alias.
+   Real styles are imported globally in app/layout.tsx. */

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSIRReact.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d742216a3b059909874d1ab71f375062711bedab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c587b0c747514bde121d28232b6bbdd24a3be0d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSIRReact.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSIRReact.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
