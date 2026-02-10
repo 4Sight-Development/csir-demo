@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\csir-demo\\src\\CSIRReact.Server.Test\\CSIRReact.Server.Test.csproj": {}
+    "C:\\csir\\csir-demo\\src\\CSIRReact.Server.Test\\CSIRReact.Server.Test.csproj": {}
   },
   "projects": {
-    "C:\\dev\\csir-demo\\src\\CSIRReact.Server.Test\\CSIRReact.Server.Test.csproj": {
+    "C:\\csir\\csir-demo\\src\\CSIRReact.DataAccess\\CSIRReact.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\csir-demo\\src\\CSIRReact.Server.Test\\CSIRReact.Server.Test.csproj",
-        "projectName": "CSIRReact.Server.Test",
-        "projectPath": "C:\\dev\\csir-demo\\src\\CSIRReact.Server.Test\\CSIRReact.Server.Test.csproj",
-        "packagesPath": "C:\\Users\\pierredv\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\csir-demo\\src\\CSIRReact.Server.Test\\obj\\",
+        "projectUniqueName": "C:\\csir\\csir-demo\\src\\CSIRReact.DataAccess\\CSIRReact.DataAccess.csproj",
+        "projectName": "CSIRReact.DataAccess",
+        "projectPath": "C:\\csir\\csir-demo\\src\\CSIRReact.DataAccess\\CSIRReact.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Lehan.Hattingh\\.nuget\\packages\\",
+        "outputPath": "C:\\csir\\csir-demo\\src\\CSIRReact.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\pierredv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+          "C:\\Users\\Lehan.Hattingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -28,17 +29,94 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\DevExpress 24.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.devexpress.com/nV7P3a2zLq7AlX1WqDwOV9cGgpSV7RiPoS7iVEKAhobnh8yVtu/api/v3/index.json": {}
+          "https://nuget.devexpress.com/e9WfYgRZuV5NS4WPIEk4ZjghMlx3FCYW9mrPBenxXE8G1C3oR7/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\csir\\csir-demo\\src\\CSIRReact.Logic\\CSIRReact.Logic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\csir\\csir-demo\\src\\CSIRReact.Logic\\CSIRReact.Logic.csproj",
+        "projectName": "CSIRReact.Logic",
+        "projectPath": "C:\\csir\\csir-demo\\src\\CSIRReact.Logic\\CSIRReact.Logic.csproj",
+        "packagesPath": "C:\\Users\\Lehan.Hattingh\\.nuget\\packages\\",
+        "outputPath": "C:\\csir\\csir-demo\\src\\CSIRReact.Logic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lehan.Hattingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 24.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/e9WfYgRZuV5NS4WPIEk4ZjghMlx3FCYW9mrPBenxXE8G1C3oR7/api/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\dev\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj": {
-                "projectPath": "C:\\dev\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj"
+              "C:\\csir\\csir-demo\\src\\CSIRReact.DataAccess\\CSIRReact.DataAccess.csproj": {
+                "projectPath": "C:\\csir\\csir-demo\\src\\CSIRReact.DataAccess\\CSIRReact.DataAccess.csproj"
               }
             }
           }
@@ -53,7 +131,95 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.5.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\csir\\csir-demo\\src\\CSIRReact.Server.Test\\CSIRReact.Server.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\csir\\csir-demo\\src\\CSIRReact.Server.Test\\CSIRReact.Server.Test.csproj",
+        "projectName": "CSIRReact.Server.Test",
+        "projectPath": "C:\\csir\\csir-demo\\src\\CSIRReact.Server.Test\\CSIRReact.Server.Test.csproj",
+        "packagesPath": "C:\\Users\\Lehan.Hattingh\\.nuget\\packages\\",
+        "outputPath": "C:\\csir\\csir-demo\\src\\CSIRReact.Server.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lehan.Hattingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 24.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/e9WfYgRZuV5NS4WPIEk4ZjghMlx3FCYW9mrPBenxXE8G1C3oR7/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\csir\\csir-demo\\src\\CSIRReact.Logic\\CSIRReact.Logic.csproj": {
+                "projectPath": "C:\\csir\\csir-demo\\src\\CSIRReact.Logic\\CSIRReact.Logic.csproj"
+              },
+              "C:\\csir\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj": {
+                "projectPath": "C:\\csir\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -104,26 +270,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\dev\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj": {
+    "C:\\csir\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj",
+        "projectUniqueName": "C:\\csir\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj",
         "projectName": "CSIRReact.Server",
-        "projectPath": "C:\\dev\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj",
-        "packagesPath": "C:\\Users\\pierredv\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\csir-demo\\src\\CSIRReact.Server\\obj\\",
+        "projectPath": "C:\\csir\\csir-demo\\src\\CSIRReact.Server\\CSIRReact.Server.csproj",
+        "packagesPath": "C:\\Users\\Lehan.Hattingh\\.nuget\\packages\\",
+        "outputPath": "C:\\csir\\csir-demo\\src\\CSIRReact.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\pierredv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+          "C:\\Users\\Lehan.Hattingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -132,15 +299,22 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\DevExpress 24.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.devexpress.com/nV7P3a2zLq7AlX1WqDwOV9cGgpSV7RiPoS7iVEKAhobnh8yVtu/api/v3/index.json": {}
+          "https://nuget.devexpress.com/e9WfYgRZuV5NS4WPIEk4ZjghMlx3FCYW9mrPBenxXE8G1C3oR7/api/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\csir\\csir-demo\\src\\CSIRReact.DataAccess\\CSIRReact.DataAccess.csproj": {
+                "projectPath": "C:\\csir\\csir-demo\\src\\CSIRReact.DataAccess\\CSIRReact.DataAccess.csproj"
+              },
+              "C:\\csir\\csir-demo\\src\\CSIRReact.Logic\\CSIRReact.Logic.csproj": {
+                "projectPath": "C:\\csir\\csir-demo\\src\\CSIRReact.Logic\\CSIRReact.Logic.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -153,7 +327,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -199,7 +373,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:41130",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\dev\\csir-demo\\src\\CSIRReact.Server\\..\\csirreact.client",
+"WorkingDirectory": "C:\\csir\\csir-demo\\src\\CSIRReact.Server\\..\\csirreact.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

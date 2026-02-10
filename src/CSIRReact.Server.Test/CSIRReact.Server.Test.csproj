@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CSIRReact.Server\CSIRReact.Server.csproj" />
+    <ProjectReference Include="..\CSIRReact.Logic\CSIRReact.Logic.csproj" />
   </ItemGroup>
 
   <ItemGroup>
