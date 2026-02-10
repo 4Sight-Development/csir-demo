@@ -4,10 +4,12 @@ ENV APP_API_URL=http://localhost:7106
 # Set the working directory inside the container
 WORKDIR /app
 
-COPY ["csirreact.client/package*.json", "./"]
+RUN ls
+
 # Copy package.json and package-lock.json
-COPY package*.json ./
+COPY ["csirreact.client/package*.json", "."]
  
+RUN ls
 # Install dependencies
 RUN npm install
  
@@ -18,7 +20,7 @@ COPY ["csirreact.client/.", "."]
 EXPOSE 3000
 
 # add env.sh to docker-entrypoint.d
-COPY env.sh /docker-entrypoint.d/env.sh
+COPY ["csirreact.client/env.sh", "/docker-entrypoint.d/env.sh"]
 RUN chmod +x /docker-entrypoint.d/env.sh
 
 # Define the command to run your app

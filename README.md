@@ -4,6 +4,9 @@
 The Provision or supply of Software Development Services
  CSIR EOI No. 8121/10/02/2026
 
+# Docker build
+docker build -f src\csirreact.client\Dockerfile --force-rm -t 4sightdev/csir-eoi-demo-client:latest src\.
+docker build -f src\CSIRReact.Server\Dockerfile --force-rm -t 4sightdev/csir-eoi-demo-server:latest src\.
 
 # Source Code
 

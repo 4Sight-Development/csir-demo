@@ -16,6 +16,8 @@ ENV ASPNETCORE_ENVIRONMENT=Development
 
 WORKDIR /src
 COPY ["CSIRReact.Server/CSIRReact.Server.csproj", "CSIRReact.Server/"]
+COPY ["CSIRReact.DataAccess/CSIRReact.DataAccess.csproj", "CSIRReact.DataAccess/"]
+COPY ["CSIRReact.Logic/CSIRReact.Logic.csproj", "CSIRReact.Logic/"]
 #COPY ["csirreact.client/csirreact.client.esproj", "csirreact.client/"]
 RUN dotnet restore "./CSIRReact.Server/CSIRReact.Server.csproj"
 COPY . .
