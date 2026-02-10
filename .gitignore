@@ -3,3 +3,5 @@
 ################################################################################
 
 /src/.vs
+/src/csirreact.client/.vscode
+/src/csirreact.client/obj/Debug
