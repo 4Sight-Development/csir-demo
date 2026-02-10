@@ -20,6 +20,8 @@
 
   <ItemGroup>
     <PackageReference Include="MQTTnet" Version="4.3.2" />
+    <ProjectReference Include="..\CSIRReact.Logic\CSIRReact.Logic.csproj" />
+    <ProjectReference Include="..\CSIRReact.DataAccess\CSIRReact.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

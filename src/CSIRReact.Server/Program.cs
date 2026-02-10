@@ -7,6 +7,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHostedService<CSIRReact.Server.Services.MqttPublisherService>();
+builder.Services.AddHttpClient();
+
+// Logic/DataAccess DI
+builder.Services.AddScoped<CSIRReact.DataAccess.Interfaces.IUserRepository, CSIRReact.DataAccess.Implementations.DemoUserRepository>();
+builder.Services.AddScoped<CSIRReact.DataAccess.Interfaces.IWeatherProvider, CSIRReact.DataAccess.Implementations.HttpWeatherProvider>();
+builder.Services.AddScoped<CSIRReact.Logic.Interfaces.IAuthService, CSIRReact.Logic.Implementations.AuthService>();
+builder.Services.AddScoped<CSIRReact.Logic.Interfaces.IWeatherService, CSIRReact.Logic.Implementations.WeatherService>();
 
 var allowedCors = builder.Configuration.GetSection("CorsOrigins").Get<string[]>();
 
